@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="jumbotron">
+<h3>New Post:</h3>
+<form class="post-form" method="post">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="save btn btn-default">
+    Save
+</button></form></div>
+<script>
+var editor =new MediumEditor('.editable');
+
+</script>
+{% endblock %}
